@@ -1194,3 +1194,35 @@ main { padding-top: 76px; }
 
 /* ---------- 26. AOS adjustments ---------- */
 [data-aos] { pointer-events: auto; }
+
+
+/* --- NAVBAR SOCIALS FIX --- */
+.navbar__socials {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    margin-right: 12px;
+}
+.navbar__socials a {
+    color: var(--white);
+    transition: all 0.3s ease;
+    display: flex;
+    opacity: 0.8;
+}
+.navbar__socials a:hover {
+    opacity: 1;
+}
+
+/* Facebook Hover */
+.navbar__socials a.fb-link:hover {
+    color: #1877F2;
+}
+
+/* Instagram Hover */
+.navbar__socials a.ig-link:hover .svg-ig * {
+    stroke: url(#ig-grad);
+}
+
+@media (max-width: 960px) {
+    .navbar__socials { display: none; }
+}
