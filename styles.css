@@ -299,6 +299,8 @@ main { padding-top: 76px; }
 .hero__inner {
     position: relative;
     z-index: 2;
+}
+.hero__content {
     max-width: 760px;
 }
 .hero__title {
