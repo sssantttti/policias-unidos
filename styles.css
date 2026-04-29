@@ -275,7 +275,10 @@ main { padding-top: 76px; }
 
 /* ---------- 7. Hero (home) ---------- */
 .hero {
-    background: url('./hero-bg.png') no-repeat center center;
+    background-color: var(--navy);
+    background-image: url('hero-bg.png');
+    background-position: center top;
+    background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
     color: var(--white);
