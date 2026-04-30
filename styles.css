@@ -1263,3 +1263,14 @@ main { padding-top: 76px; }
         height: 28px;
     }
 }
+
+.navbar__logo-img {
+    height: 54px;
+    width: auto;
+    object-fit: contain;
+}
+@media (max-width: 768px) {
+    .navbar__logo-img {
+        height: 42px;
+    }
+}
