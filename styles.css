@@ -1268,6 +1268,8 @@ main { padding-top: 96px; }
     height: 74px;
     width: auto;
     object-fit: contain;
+    transform: scale(1.7);
+    transform-origin: left center;
 }
 @media (max-width: 768px) {
     .navbar__logo-img {
