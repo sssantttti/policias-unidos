@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donar - Policías Unidos</title>
+    <link rel="stylesheet" href="./styles.css">
+    <style>
+        body, html { margin: 0; padding: 0; height: 100%; }
+        .construction-page {
+            min-height: 100vh;
+            background-color: var(--navy);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            text-align: center;
+            padding: 24px;
+        }
+        .construction-icon {
+            width: 80px;
+            height: 80px;
+            margin-bottom: 24px;
+            color: var(--gold);
+        }
+        .construction-title {
+            font-family: var(--font-display);
+            font-size: clamp(2rem, 4vw, 3rem);
+            margin-bottom: 16px;
+            line-height: 1.2;
+        }
+        .construction-text {
+            font-size: 1.15rem;
+            color: rgba(255,255,255,0.8);
+            max-width: 500px;
+            margin-bottom: 40px;
+        }
+    </style>
+</head>
+<body>
+
+    <main class="construction-page">
+        <!-- Warning/Construction Icon -->
+        <svg class="construction-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path>
+            <line x1="12" y1="9" x2="12" y2="13"></line>
+            <line x1="12" y1="17" x2="12.01" y2="17"></line>
+        </svg>
+
+        <h1 class="construction-title">Próximamente...</h1>
+        <p class="construction-text">
+            Ups, donar aún no está disponible. Estamos trabajando en esto para que lo puedas hacer lo antes posible.
+        </p>
+
+        <a href="./index.html" class="btn btn--red btn--lg">Volver al inicio</a>
+    </main>
+
+</body>
+</html>
