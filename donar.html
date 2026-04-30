@@ -31,10 +31,20 @@
             line-height: 1.2;
         }
         .construction-text {
-            font-size: 1.15rem;
-            color: rgba(255,255,255,0.8);
-            max-width: 500px;
+            font-family: var(--font-body);
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: rgba(255,255,255,0.95);
+            max-width: 580px;
             margin-bottom: 40px;
+            line-height: 1.5;
+        }
+        .construction-text em {
+            font-family: var(--font-display);
+            font-weight: 700;
+            font-style: italic;
+            color: var(--gold);
+            font-size: 1.45rem;
         }
     </style>
 </head>
@@ -50,7 +60,7 @@
 
         <h1 class="construction-title">Próximamente...</h1>
         <p class="construction-text">
-            Ups, donar aún no está disponible. Estamos trabajando en esto para que lo puedas hacer lo antes posible.
+            Ups, donar <em>aún no está disponible</em>. Estamos trabajando en esto para que lo puedas hacer <em>lo antes posible</em>.
         </p>
 
         <a href="./index.html" class="btn btn--red btn--lg">Volver al inicio</a>
