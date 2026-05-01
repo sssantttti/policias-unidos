@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta name="description" content="Policías Unidos: Asociación Civil que asiste a policías heridos en cumplimiento del deber, retirados por incapacidad y familias de los caídos.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+<link rel="stylesheet" href="./styles.css?v=1777438750224">
+
+    <title>Policías Unidos</title>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/pages/donar-unico.css">
+</head>
+<body>
+
+<!-- Navbar -->
+<header class="navbar">
+    <div class="container navbar__inner navbar__inner--center">
+        <a href="./index.html" class="navbar__logo" aria-label="Policías Unidos — Inicio">
+            <img src="./logo.png" alt="Policías Unidos Asociación Civil" class="navbar__logo-img">
+        </a>
+        
+        
+            <a href="./donar.html" class="btn btn--red">COLABORÁ</a>
+            <button class="navbar__toggle" aria-label="Abrir menú" aria-controls="primary-nav">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </div>
+</header>
+
+
+
+<main class="donar-status__main">
+    <div class="donar-status__card">
+        <div class="donar-status__icon donar-status__icon--error">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg>
+        </div>
+        <h1 class="donar-status__title">El pago no se pudo completar</h1>
+        <p class="donar-status__subtitle">Podés intentarlo nuevamente o contactarnos si el problema persiste.</p>
+
+        <div class="donar-status__actions">
+            <a href="./donar-unico.html" class="donar-btn donar-btn--red">Intentar nuevamente</a>
+            <a href="https://wa.me/5491139432042" target="_blank" rel="noopener noreferrer" class="donar-btn donar-btn--outline">Contactarnos por WhatsApp</a>
+        </div>
+    </div>
+</main>
+
+<footer class="footer footer--minimal">
+    <div class="container">
+        <div class="footer__bottom" style="justify-content: center; border-top: none; padding-top: 0;">
+            <div class="footer__copyright" style="text-align: center;">
+                <span>© <span id="year">2026</span> Asociación Civil Policías Unidos. Todos los derechos reservados.</span>
+            </div>
+        </div>
+    </div>
+</footer>
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
