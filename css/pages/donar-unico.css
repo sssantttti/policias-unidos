@@ -19,6 +19,9 @@
 .navbar__inner--center {
     justify-content: center;
 }
+.navbar__inner--center .navbar__logo-img {
+    transform-origin: center center;
+}
 
 /* ================== DONAR HERO ================== */
 .donar-hero__section {
