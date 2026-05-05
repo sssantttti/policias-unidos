@@ -63,8 +63,9 @@
 
 <main>
 
-<section class="page-hero">
-    <div class="container">
+<section class="page-hero" style="background-image: url('./nosotros-banner.jpg'); background-size: cover; background-position: center; position: relative;">
+    <div style="position: absolute; inset: 0; background: rgba(26,39,68,0.8); z-index: 0;"></div>
+    <div class="container" style="position: relative; z-index: 2;">
         <div class="page-hero__inner">
             <nav class="breadcrumb"><a href="./index.html">Inicio</a><span>/</span><span>Quiénes somos</span></nav>
             <span class="eyebrow eyebrow--gold">Asociación Civil · Personería IGJ</span>
@@ -123,15 +124,22 @@
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
                 </div>
                 <h3>Valores</h3>
-                <ul style="text-align: left; font-size: 0.95rem; display: flex; flex-direction: column; gap: 8px;">
-                    <li><strong>Solidaridad real:</strong> Actuamos desde la empatía y la acción concreta. Ayudar no es una opción, es nuestra esencia.</li>
-                    <li><strong>Compromiso:</strong> Asumimos cada caso como propio, con responsabilidad y vocación de servicio permanente.</li>
-                    <li><strong>Lealtad:</strong> Acompañamos sin condiciones, con respeto y sentido de pertenencia. Nadie queda solo.</li>
-                    <li><strong>Dignidad:</strong> Trabajamos para que cada policía y su familia sean tratados con el reconocimiento que merecen.</li>
-                    <li><strong>Transparencia:</strong> Gestionamos cada recurso con claridad y rendición de cuentas. La confianza se construye con hechos.</li>
-                    <li><strong>Vocación de servicio:</strong> Transformamos nuestra experiencia en una herramienta para ayudar a otros.</li>
-                    <li><strong>Unidad:</strong> Creemos en la fuerza del colectivo y la construcción conjunta. Juntos somos más fuertes.</li>
-                </ul>
+                <p style="margin-bottom: 16px;">Nuestra labor se asienta sobre bases inquebrantables. Creemos profundamente en la fuerza del colectivo y en el poder de transformar el dolor en ayuda para quienes nos protegen.</p>
+                <div id="valores-content" style="max-height: 0; overflow: hidden; transition: max-height 0.4s ease; text-align: left;">
+                    <ul style="font-size: 0.95rem; display: flex; flex-direction: column; gap: 8px; margin-bottom: 16px; padding-top: 8px;">
+                        <li><strong>Solidaridad real:</strong> Actuamos desde la empatía y la acción concreta. Ayudar no es una opción, es nuestra esencia.</li>
+                        <li><strong>Compromiso:</strong> Asumimos cada caso como propio, con responsabilidad y vocación de servicio permanente.</li>
+                        <li><strong>Lealtad:</strong> Acompañamos sin condiciones, con respeto y sentido de pertenencia. Nadie queda solo.</li>
+                        <li><strong>Dignidad:</strong> Trabajamos para que cada policía y su familia sean tratados con el reconocimiento que merecen.</li>
+                        <li><strong>Transparencia:</strong> Gestionamos cada recurso con claridad y rendición de cuentas. La confianza se construye con hechos.</li>
+                        <li><strong>Vocación de servicio:</strong> Transformamos nuestra experiencia en una herramienta para ayudar a otros.</li>
+                        <li><strong>Unidad:</strong> Creemos en la fuerza del colectivo y la construcción conjunta. Juntos somos más fuertes.</li>
+                    </ul>
+                </div>
+                <button id="valores-toggle" style="margin-top: auto; padding-top: 16px; color: var(--gold); font-weight: 600; text-transform: uppercase; font-size: 0.85rem; letter-spacing: 0.05em; display: inline-flex; align-items: center; justify-content: center; gap: 6px; width: 100%; border-top: 1px solid var(--gray-100);">
+                    Ver Valores 
+                    <svg id="valores-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="transition: transform 0.3s ease;"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </button>
             </div>
         </div>
     </div>
@@ -228,7 +236,7 @@
 </section>
 
 <!-- Institutional data -->
-<section style="background: var(--bg); padding-top: 0;">
+<section style="background: var(--bg);">
     <div class="container">
         <div class="inst-data" data-aos="fade-up">
             <div class="inst-data__item">
@@ -243,7 +251,7 @@
                 <strong>30-71934580-4</strong>
                 <span>CUIT</span>
             </div>
-            <div class="inst-data__item" style="grid-column: span 1;">
+            <div class="inst-data__item" style="grid-column: 1 / -1;">
                 <strong style="font-size: 1.5rem; text-transform: uppercase;">Asociación Civil sin fines de lucro</strong>
                 <span>Descripción</span>
             </div>
@@ -342,5 +350,29 @@
 <a href="https://wa.me/5491139432042?text=%C2%A1Hola%21%20Estaba%20mirando%20la%20p%C3%A1gina%20de%20Polic%C3%ADas%20Unidos%20y%20me%20gustar%C3%ADa%20hacerles%20una%20consulta." class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Contactar por WhatsApp">
     <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
 </a>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const btnValores = document.getElementById('valores-toggle');
+    const contentValores = document.getElementById('valores-content');
+    const iconValores = document.getElementById('valores-icon');
+    let isExpanded = false;
+
+    if(btnValores) {
+        btnValores.addEventListener('click', () => {
+            isExpanded = !isExpanded;
+            if(isExpanded) {
+                contentValores.style.maxHeight = contentValores.scrollHeight + 10 + "px";
+                iconValores.style.transform = "rotate(180deg)";
+                btnValores.innerHTML = `Ocultar Valores <svg id="valores-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="transition: transform 0.3s ease; transform: rotate(180deg);"><polyline points="6 9 12 15 18 9"></polyline></svg>`;
+            } else {
+                contentValores.style.maxHeight = "0";
+                iconValores.style.transform = "rotate(0deg)";
+                btnValores.innerHTML = `Ver Valores <svg id="valores-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="transition: transform 0.3s ease; transform: rotate(0deg);"><polyline points="6 9 12 15 18 9"></polyline></svg>`;
+            }
+        });
+    }
+});
+</script>
 </body>
 </html>
