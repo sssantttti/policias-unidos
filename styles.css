@@ -399,11 +399,13 @@ main { padding-top: 96px; }
 .stats { background: var(--white); }
 .stats__grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 32px;
     text-align: center;
+    max-width: 900px;
+    margin: 0 auto;
 }
-@media (max-width: 720px) { .stats__grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 720px) { .stats__grid { grid-template-columns: 1fr; } }
 .stat__num {
     font-family: var(--font-display);
     font-weight: 600;
@@ -478,9 +480,9 @@ main { padding-top: 96px; }
     height: 100%;
 }
 .feature-card:hover {
-    transform: translateY(-3px);
-    box-shadow: var(--shadow-md);
-    border-color: var(--gold-soft);
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 16px 32px rgba(26, 39, 68, 0.08);
+    border-color: var(--gold);
 }
 .feature-card__icon {
     width: 52px; height: 52px;
@@ -594,6 +596,7 @@ main { padding-top: 96px; }
 
 /* swiper override for mobile testimonial slider */
 .swiper { padding-bottom: 40px !important; }
+.swiper-slide { height: auto !important; }
 .swiper-pagination-bullet { background: rgba(255,255,255,0.4) !important; }
 .swiper-pagination-bullet-active { background: var(--gold) !important; }
 
