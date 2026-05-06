@@ -1437,3 +1437,66 @@ main { padding-top: 96px; }
         margin-top: 12px;
     }
 }
+
+/* ---------- 25. Asociarse Razones ---------- */
+.asociarse-razones__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  align-items: start;
+}
+
+.asociarse-razon__card {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 24px;
+  height: 100%;
+  min-height: 180px;
+}
+
+.asociarse-razon__icon {
+  width: 40px;
+  height: 40px;
+  background: #F4F5F7;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.asociarse-razon__icon svg {
+  width: 20px;
+  height: 20px;
+  color: #1A2744;
+}
+
+.asociarse-razon__title {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: #1A2744;
+  line-height: 1.3;
+  margin: 0;
+}
+
+.asociarse-razon__text {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.9rem;
+  color: #6B7280;
+  line-height: 1.6;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .asociarse-razones__grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .asociarse-razones__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
