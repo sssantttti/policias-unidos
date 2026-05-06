@@ -55,15 +55,7 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    // -------- GSAP hero entrance --------
-    if (window.gsap && document.querySelector('.hero__title')) {
-        const tl = gsap.timeline({ defaults: { ease: 'power3.out' } });
-        tl.from('.hero .eyebrow', { y: 20, opacity: 0, duration: 0.6 })
-          .from('.hero__title', { y: 30, opacity: 0, duration: 0.9 }, '-=0.3')
-          .from('.hero__subtitle', { y: 20, opacity: 0, duration: 0.7 }, '-=0.5')
-          .from('.hero__cta .btn', { y: 20, opacity: 0, duration: 0.5, stagger: 0.1 }, '-=0.4')
-          .from('.hero__visual', { scale: 0.96, opacity: 0, duration: 1 }, '-=0.9');
-    }
+    // -------- GSAP hero entrance (Removed in favor of AOS) --------
 
     // -------- News filter (client-side demo) --------
     const filterBtns = document.querySelectorAll('.news-filters button');
