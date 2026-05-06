@@ -284,7 +284,11 @@ section { padding: 88px 0; }
     padding: 10px 24px;
     color: rgba(255,255,255,0.85);
 }
-.nav-dropdown-menu a::after { display: none !important; }
+.nav-dropdown-menu a::after {
+    left: 24px;
+    right: 24px;
+    bottom: 8px;
+}
 .nav-dropdown-menu a:hover {
     background: rgba(255,255,255,0.05);
     color: var(--white);
