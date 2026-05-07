@@ -561,7 +561,7 @@ main {
 /* ---------- 7. Hero (home) ---------- */
 .hero {
     background-color: var(--navy);
-    background-image: url('hero-bg.png');
+    background-image: url('hero-bg-v2.png');
     background-position: center top;
     background-repeat: no-repeat;
     background-attachment: fixed;
