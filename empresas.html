@@ -84,7 +84,7 @@
 
 <section style="background: var(--white);">
     <div class="container container--narrow" data-aos="fade-up">
-        <div class="grid grid--2" style="gap: 64px;">
+        <div class="grid grid--2" style="gap: 64px; align-items: center;">
             <div>
                 <span class="eyebrow">Por qué sumarse</span>
                 <h2>Una causa cercana, un impacto medible.</h2>
@@ -160,7 +160,7 @@
             <article class="tier" data-aos="fade-up">
                 <span class="tier__label">Convenio</span>
                 <div class="tier__name">Bronce</div>
-                <p class="tier__price">A partir de $250.000 / mes</p>
+                <p class="tier__price">A partir de $20.000 / mes</p>
                 <ul>
                     <li>Logo en sitio web institucional</li>
                     <li>Reporte trimestral de impacto</li>
@@ -172,7 +172,7 @@
             <article class="tier tier--featured" data-aos="fade-up" data-aos-delay="100">
                 <span class="tier__label">Más elegido</span>
                 <div class="tier__name">Plata</div>
-                <p class="tier__price">A partir de $600.000 / mes</p>
+                <p class="tier__price">A partir de $50.000 / mes</p>
                 <ul>
                     <li>Todo lo del nivel Bronce</li>
                     <li>Presencia en eventos institucionales</li>
@@ -185,7 +185,7 @@
             <article class="tier" data-aos="fade-up" data-aos-delay="200">
                 <span class="tier__label">Convenio</span>
                 <div class="tier__name">Oro</div>
-                <p class="tier__price">A partir de $1.500.000 / mes</p>
+                <p class="tier__price">A partir de $150.000 / mes</p>
                 <ul>
                     <li>Todo lo del nivel Plata</li>
                     <li>Naming en programa específico</li>
@@ -199,31 +199,7 @@
     </div>
 </section>
 
-<!-- Sponsors -->
-<section style="background: var(--white);">
-    <div class="container">
-        <span class="eyebrow" style="display:block; text-align:center;">Empresas adheridas</span>
-        <h2 class="section-title">Ya forman parte</h2>
-        <p class="section-lead">
-            Compañías argentinas que entendieron que cuidar a quien cuida es también una
-            forma de construir país.
-        </p>
-        <div class="sponsors-grid" data-aos="fade-up">
-            <div class="sponsor">Empresa Uno</div>
-            <div class="sponsor">Empresa Dos</div>
-            <div class="sponsor">Empresa Tres</div>
-            <div class="sponsor">Empresa Cuatro</div>
-            <div class="sponsor">Empresa Cinco</div>
-            <div class="sponsor">Empresa Seis</div>
-            <div class="sponsor">Empresa Siete</div>
-            <div class="sponsor">Empresa Ocho</div>
-            <div class="sponsor">Empresa Nueve</div>
-            <div class="sponsor">Empresa Diez</div>
-            <div class="sponsor">Empresa Once</div>
-            <div class="sponsor">Empresa Doce</div>
-        </div>
-    </div>
-</section>
+<!-- Sponsors Section Removed -->
 
 <!-- Form -->
 <section id="empresa-form" style="background: var(--bg);">
@@ -236,7 +212,7 @@
                 de 48 horas hábiles.
             </p>
         </div>
-        <form class="form" data-demo data-aos="fade-up">
+        <form class="form" id="empresa-whatsapp-form" data-aos="fade-up">
             <div class="form__row">
                 <div class="form__field">
                     <label for="razon">Razón social *</label>
@@ -281,8 +257,34 @@
                 <textarea id="mensaje" name="mensaje" placeholder="Contanos brevemente sobre tu empresa y qué buscás del convenio."></textarea>
             </div>
             <button type="submit" class="btn btn--red btn--lg">Quiero que mi empresa se sume</button>
-            <p class="form__status" style="margin-top: 18px; font-size: 0.9rem;"></p>
         </form>
+        <script>
+            document.getElementById('empresa-whatsapp-form').addEventListener('submit', function(e) {
+                e.preventDefault();
+                const razon = document.getElementById('razon').value;
+                const cuit = document.getElementById('cuit').value || 'No indicado';
+                const nombre = document.getElementById('nombre').value;
+                const cargo = document.getElementById('cargo').value;
+                const email = document.getElementById('email').value;
+                const telefono = document.getElementById('telefono').value;
+                const nivel = document.getElementById('nivel').value;
+                const mensaje = document.getElementById('mensaje').value;
+
+                let texto = `¡Hola! Quiero sumar mi empresa.\n\n`;
+                texto += `*Razón Social:* ${razon}\n`;
+                texto += `*CUIT:* ${cuit}\n`;
+                texto += `*Contacto:* ${nombre} (${cargo})\n`;
+                texto += `*Email:* ${email}\n`;
+                texto += `*Teléfono:* ${telefono}\n`;
+                texto += `*Nivel de interés:* ${nivel}\n`;
+                if (mensaje) {
+                    texto += `*Mensaje:* ${mensaje}`;
+                }
+
+                const url = `https://wa.me/5491139432042?text=${encodeURIComponent(texto)}`;
+                window.open(url, '_blank');
+            });
+        </script>
     </div>
 </section>
 
