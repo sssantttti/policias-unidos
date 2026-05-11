@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta name="description" content="Galería de imágenes del Acto por el Día del Policía Herido en Acto de Servicio.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+<link rel="stylesheet" href="./styles.css">
+
+    <title>Acto 30 de Abril · Policías Unidos</title>
+    <style>
+        .gallery-section { padding: 60px 0 100px; background: var(--bg); }
+        .gallery-text { max-width: 800px; margin: 0 auto 48px; font-size: 1.1rem; line-height: 1.7; color: var(--gray-800); }
+        .gallery-text p { margin-bottom: 24px; }
+        
+        .carousel-wrapper { position: relative; padding: 0 50px; }
+        .swiper-gallery { width: 100%; padding-bottom: 50px; }
+        
+        .swiper-gallery .swiper-slide { height: 500px; display: flex; justify-content: center; align-items: center; background: #0a0a0a; border-radius: var(--radius-card); overflow: hidden; }
+        .swiper-gallery .swiper-slide img { width: 100%; height: 100%; object-fit: contain; }
+        
+        @media (max-width: 768px) {
+            .carousel-wrapper { padding: 0; }
+            .swiper-button-prev, .swiper-button-next { display: none !important; }
+            .swiper-gallery .swiper-slide { height: 300px; }
+        }
+        
+        .swiper-button-next, .swiper-button-prev { color: var(--gold) !important; margin-top: -25px; }
+        .swiper-pagination-bullet-active { background: var(--gold) !important; }
+    </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<header class="navbar">
+    <div class="container navbar__inner">
+        <a href="./index.html" class="navbar__logo" aria-label="Policías Unidos — Inicio">
+            <img src="./logo.png" alt="Policías Unidos Asociación Civil" class="navbar__logo-img">
+        </a>
+        <nav class="navbar__links" id="primary-nav">
+            <div class="nav-dropdown">
+                <span class="nav-dropdown-toggle">Nosotros</span>
+                <div class="nav-dropdown-menu">
+                    <a href="./nosotros.html">Quiénes Somos</a>
+                    <a href="./que-hacemos.html">Qué Hacemos</a>
+                </div>
+            </div>
+            <a href="./programas.html" class="">Programas</a>
+            <a href="./empresas.html" class="">Empresas</a>
+            <a href="./noticias.html" class="active">Noticias</a>
+            <a href="./contacto.html" class="">Contacto</a>
+        </nav>
+        <div class="navbar__cta">
+            <div class="navbar__socials">
+                <a href="https://www.facebook.com/share/1CnZ1nKJCn/" target="_blank" rel="noopener noreferrer" aria-label="Facebook" class="social-link fb-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+                <a href="https://www.instagram.com/policiasunidos.ong?igsh=MWc5ZDY2Mm10dDN4Zg==" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="social-link ig-link">
+                    <svg class="svg-ig" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <defs>
+                            <linearGradient id="ig-grad" x1="0%" y1="100%" x2="100%" y2="0%">
+                                <stop offset="0%" stop-color="#f09433" />
+                                <stop offset="25%" stop-color="#e6683c" />
+                                <stop offset="50%" stop-color="#dc2743" />
+                                <stop offset="75%" stop-color="#cc2366" />
+                                <stop offset="100%" stop-color="#bc1888" />
+                            </linearGradient>
+                        </defs>
+                        <rect x="2" y="2" width="20" height="20" rx="5"/>
+                        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                        <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+                    </svg>
+                </a>
+            </div>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSc4DsRGqnbUVHweHnIdXBZ9ygT_4WXOQtL_OMLgvkPzBGbZQQ/viewform" target="_blank" rel="noopener noreferrer" class="btn btn--gold">ASOCIATE</a>
+            <a href="./donar.html" class="btn btn--red">COLABORÁ</a>
+            <button class="navbar__toggle" aria-label="Abrir menú" aria-controls="primary-nav">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </div>
+</header>
+
+
+<main>
+    <section class="page-hero">
+        <div class="container">
+            <div class="page-hero__inner">
+                <nav class="breadcrumb"><a href="./index.html">Inicio</a><span>/</span><a href="./noticias.html">Noticias</a><span>/</span><span>Evento</span></nav>
+                <span class="eyebrow eyebrow--gold">30 de Abril 2026</span>
+                <h1>Acto por el Día del Policía Herido en Acto de Servicio</h1>
+                <p>Acompañamos y honramos a nuestros héroes en una emotiva jornada.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="gallery-section">
+        <div class="container">
+            <div class="gallery-text">
+                <p>El 30 de abril conmemoramos el Día del Policía Herido en Acto de Servicio con un emotivo acto donde honramos el sacrificio y la valentía de quienes pusieron su vida en la línea de fuego para protegernos a todos. Fue una jornada de encuentro y reconocimiento, en la que participaron autoridades, oficiales en actividad y situación de retiro, junto a las familias que son el pilar fundamental de nuestra institución.</p>
+                <p>Durante el evento, se hicieron entregas de reconocimientos especiales a aquellos agentes que demostraron un valor excepcional, reafirmando nuestro compromiso inquebrantable de acompañarlos en su recuperación y reinserción. Estas historias de resiliencia nos impulsan a seguir fortaleciendo nuestra red de contención económica, legal y psicológica, asegurando que ningún héroe quede en el olvido.</p>
+                <p>Agradecemos a todos los que se sumaron a este encuentro tan significativo. Cada abrazo, cada palabra de aliento y cada donación nos permite seguir construyendo un futuro donde nuestros policías y sus familias reciban el apoyo y el respeto que verdaderamente merecen.</p>
+            </div>
+
+            <div class="carousel-wrapper">
+                <div class="swiper swiper-gallery">
+                    <div class="swiper-wrapper">
+                        <!-- Todas las imágenes -->
+                        <div class="swiper-slide"><img src="./evento-30-abril/WhatsApp%20Image%202026-05-03%20at%209.54.04%20AM%20(1).webp" alt="Foto"></div>
+                        <div class="swiper-slide"><img src="./evento-30-abril/WhatsApp%20Image%202026-05-03%20at%209.54.04%20AM%20(2).webp" alt="Foto"></div>
+                        <div class="swiper-slide"><img src="./evento-30-abril/WhatsApp%20Image%202026-05-03%20at%209.54.04%20AM%20(3).webp" alt="Foto"></div>
+                        <div class="swiper-slide"><img src="./evento-30-abril/WhatsApp%20Image%202026-05-03%20at%209.54.04%20AM.webp" alt="Foto"></div>
+                        <div class="swiper-slide"><img src="./evento-30-abril/WhatsApp%20Image%202026-05-03%20at%209.54.05%20AM%20(1).webp" alt="Foto"></div>
+                        <div class="swiper-slide"><img src="./evento-30-abril/WhatsApp%20Image%202026-05-03%20at%209.54.05%20AM%20(2).webp" alt="Foto"></div>
+                        <div class="swiper-slide"><img src="./evento-30-abril/WhatsApp%20Image%202026-05-03%20at%209.54.05%20AM%20(3).webp" alt="Foto"></div>
+                        <div class="swiper-slide"><img src="./evento-30-abril/WhatsApp%20Image%202026-05-03%20at%209.54.05%20AM%20(4).webp" alt="Foto"></div>
+                        <div class="swiper-slide"><img src="./evento-30-abril/WhatsApp%20Image%202026-05-03%20at%209.54.05%20AM%20(5).webp" alt="Foto"></div>
+                        <div class="swiper-slide"><img src="./evento-30-abril/WhatsApp%20Image%202026-05-03%20at%209.54.05%20AM.webp" alt="Foto"></div>
+                        <div class="swiper-slide"><img src="./evento-30-abril/WhatsApp%20Image%202026-05-03%20at%209.54.06%20AM%20(1).webp" alt="Foto"></div>
+                        <div class="swiper-slide"><img src="./evento-30-abril/WhatsApp%20Image%202026-05-03%20at%209.54.06%20AM%20(2).webp" alt="Foto"></div>
+                        <div class="swiper-slide"><img src="./evento-30-abril/WhatsApp%20Image%202026-05-03%20at%209.54.06%20AM%20(3).webp" alt="Foto"></div>
+                        <div class="swiper-slide"><img src="./evento-30-abril/WhatsApp%20Image%202026-05-03%20at%209.54.06%20AM%20(4).webp" alt="Foto"></div>
+                        <div class="swiper-slide"><img src="./evento-30-abril/WhatsApp%20Image%202026-05-03%20at%209.54.06%20AM%20(5).webp" alt="Foto"></div>
+                        <div class="swiper-slide"><img src="./evento-30-abril/WhatsApp%20Image%202026-05-03%20at%209.54.06%20AM.webp" alt="Foto"></div>
+                        <div class="swiper-slide"><img src="./evento-30-abril/WhatsApp%20Image%202026-05-03%20at%209.54.07%20AM%20(1).webp" alt="Foto"></div>
+                        <div class="swiper-slide"><img src="./evento-30-abril/WhatsApp%20Image%202026-05-03%20at%209.54.07%20AM%20(2).webp" alt="Foto"></div>
+                        <div class="swiper-slide"><img src="./evento-30-abril/WhatsApp%20Image%202026-05-03%20at%209.54.07%20AM%20(3).webp" alt="Foto"></div>
+                        <div class="swiper-slide"><img src="./evento-30-abril/WhatsApp%20Image%202026-05-03%20at%209.54.07%20AM%20(4).webp" alt="Foto"></div>
+                        <div class="swiper-slide"><img src="./evento-30-abril/WhatsApp%20Image%202026-05-03%20at%209.54.07%20AM%20(5).webp" alt="Foto"></div>
+                        <div class="swiper-slide"><img src="./evento-30-abril/WhatsApp%20Image%202026-05-03%20at%209.54.07%20AM.webp" alt="Foto"></div>
+                        <div class="swiper-slide"><img src="./evento-30-abril/WhatsApp%20Image%202026-05-03%20at%209.54.08%20AM.webp" alt="Foto"></div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer__top">
+            <div class="footer__brand">
+                <a href="./index.html" class="navbar__logo footer__logo-link" aria-label="Policías Unidos — Inicio">
+                    <img src="./logo.png" alt="Policías Unidos Asociación Civil" class="navbar__logo-img">
+                </a>
+                <p class="footer__desc">
+                    Acompañamos a policías heridos en cumplimiento del deber, retirados por
+                    incapacidad y a las familias de los caídos con asistencia económica,
+                    psicológica y legal.
+                </p>
+                <p class="footer__cuit">CUIT 30-71934580-4 · Personería Jurídica IGJ</p>
+            </div>
+            <div class="footer__col">
+                <h4>Institucional</h4>
+                <ul>
+                    <li><a href="./nosotros.html">Quiénes somos</a></li>
+                    <li><a href="./que-hacemos.html">Qué hacemos</a></li>
+                    <li><a href="./noticias.html">Noticias</a></li>
+                </ul>
+            </div>
+            <div class="footer__col">
+                <h4>Sumate</h4>
+                <ul>
+                    <li><a href="./empresas.html">Empresas / RSE</a></li>
+                    <li><a href="./donar.html">Donar una vez</a></li>
+                    <li><a href="./donar.html">Donación recurrente</a></li>
+                    <li><a href="./contacto.html">Necesito asistencia</a></li>
+                </ul>
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSc4DsRGqnbUVHweHnIdXBZ9ygT_4WXOQtL_OMLgvkPzBGbZQQ/viewform" target="_blank" rel="noopener noreferrer" class="btn btn--gold" style="margin-top: 16px; display: inline-flex;">ASOCIATE</a>
+            </div>
+            <div class="footer__col">
+                <h4>Contacto</h4>
+                <ul>
+                    <li><a href="mailto:policiasunidosong@gmail.com">policiasunidosong@gmail.com</a></li>
+                    <li><a href="tel:+5491139432042">+54 9 11 3943-2042</a></li>
+                    </ul>
+                <div class="footer__socials" aria-label="Redes sociales">
+                    <a href="https://www.instagram.com/policiasunidos.ong?igsh=MWc5ZDY2Mm10dDN4Zg==" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+                    </a>
+                    <a href="https://www.facebook.com/share/1CnZ1nKJCn/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="footer__bottom">
+            <div class="footer__copyright">
+                <span>© <span id="year">2026</span> Asociación Civil Policías Unidos. Todos los derechos reservados.</span>
+                <span>Personería Jurídica otorgada por la IGJ.</span>
+            </div>
+            <div class="footer__legal-links">
+                <a href="./privacidad.html">Políticas de Privacidad</a>
+                <a href="./terminos.html">Términos de Servicio</a>
+            </div>
+        </div>
+    </div>
+</footer>
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/countup.js@2.8.0/dist/countUp.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script src="./app.js"></script>
+
+<!-- Floating WhatsApp Button -->
+<a href="https://wa.me/5491139432042?text=%C2%A1Hola%21%20Estaba%20mirando%20la%20p%C3%A1gina%20de%20Polic%C3%ADas%20Unidos%20y%20me%20gustar%C3%ADa%20hacerles%20una%20consulta." class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Contactar por WhatsApp">
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+</a>
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const swiper = new Swiper('.swiper-gallery', {
+            slidesPerView: 1,
+            spaceBetween: 20,
+            loop: true,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            breakpoints: {
+                768: {
+                    slidesPerView: 2,
+                    spaceBetween: 30,
+                },
+                1024: {
+                    slidesPerView: 3,
+                    spaceBetween: 30,
+                }
+            }
+        });
+    });
+</script>
+</body>
+</html>
