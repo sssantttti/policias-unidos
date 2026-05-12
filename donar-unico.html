@@ -199,11 +199,34 @@
             updateCta();
         });
 
-        cta.addEventListener('click', () => {
+        cta.addEventListener('click', async () => {
             if (selectedAmount > 0) {
-                console.log("Monto a donar:", selectedAmount);
-                // TODO: integrar API de Mercado Pago en este punto
-                window.location.href = "./gracias.html";
+                const originalText = cta.innerText;
+                cta.innerText = "Procesando...";
+                cta.setAttribute('disabled', 'true');
+
+                try {
+                    const response = await fetch('crear-pref.php', {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({ monto: selectedAmount })
+                    });
+
+                    const data = await response.json();
+
+                    if (data.init_point) {
+                        window.location.href = data.init_point;
+                    } else {
+                        alert("Hubo un error al generar el pago. Por favor intente nuevamente.");
+                        cta.innerText = originalText;
+                        cta.removeAttribute('disabled');
+                    }
+                } catch (error) {
+                    console.error("Error:", error);
+                    alert("Error de conexión. Intente nuevamente.");
+                    cta.innerText = originalText;
+                    cta.removeAttribute('disabled');
+                }
             }
         });
     });

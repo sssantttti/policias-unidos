@@ -2,69 +2,174 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Donar - Policías Unidos</title>
-    <link rel="stylesheet" href="./styles.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta name="description" content="Elegí cómo colaborar con Policías Unidos: Donación única o mensual para apoyar a quienes nos protegen.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+<link rel="stylesheet" href="./styles.css?v=1777438750224">
+
+    <title>Colaborar - Policías Unidos</title>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/pages/donar-unico.css">
     <style>
-        body, html { margin: 0; padding: 0; height: 100%; }
-        .construction-page {
-            min-height: 100vh;
-            background-color: var(--navy);
+        .donar-choice__section {
+            padding: 80px 0;
+            background-color: #f8f9fa;
+            min-height: 70vh;
+            display: flex;
+            align-items: center;
+        }
+        .donar-choice__grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 32px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .donar-choice__card {
+            background: white;
+            padding: 48px 32px;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
             display: flex;
             flex-direction: column;
+            justify-content: space-between;
+            border: 1px solid #eee;
+        }
+        .donar-choice__card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+        .donar-choice__icon {
+            width: 64px;
+            height: 64px;
+            background: var(--navy-light);
+            color: var(--navy);
+            border-radius: 50%;
+            display: flex;
             align-items: center;
             justify-content: center;
-            color: var(--white);
-            text-align: center;
-            padding: 24px;
+            margin: 0 auto 24px;
         }
-        .construction-icon {
-            width: 80px;
-            height: 80px;
-            margin-bottom: 24px;
-            color: var(--gold);
+        .donar-choice__card--featured .donar-choice__icon {
+            background: var(--red-light);
+            color: var(--red);
         }
-        .construction-title {
+        .donar-choice__card h3 {
             font-family: var(--font-display);
-            font-size: clamp(2rem, 4vw, 3rem);
+            font-size: 1.75rem;
             margin-bottom: 16px;
-            line-height: 1.2;
+            color: var(--navy);
         }
-        .construction-text {
-            font-family: var(--font-body);
-            font-size: 1.25rem;
-            font-weight: 600;
-            color: rgba(255,255,255,0.95);
-            max-width: 580px;
-            margin-bottom: 40px;
-            line-height: 1.5;
-        }
-        .construction-text em {
-            font-family: var(--font-display);
-            font-weight: 700;
-            font-style: italic;
-            color: var(--gold);
-            font-size: 1.45rem;
+        .donar-choice__card p {
+            color: #666;
+            margin-bottom: 32px;
+            line-height: 1.6;
         }
     </style>
 </head>
 <body>
 
-    <main class="construction-page">
-        <!-- Warning/Construction Icon -->
-        <svg class="construction-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path>
-            <line x1="12" y1="9" x2="12" y2="13"></line>
-            <line x1="12" y1="17" x2="12.01" y2="17"></line>
-        </svg>
+<!-- Navbar -->
+<header class="navbar">
+    <div class="container navbar__inner">
+        <a href="./index.html" class="navbar__logo" aria-label="Policías Unidos — Inicio">
+            <img src="./logo.png" alt="Policías Unidos Asociación Civil" class="navbar__logo-img">
+        </a>
+        <nav class="navbar__links" id="primary-nav">
+            <div class="nav-dropdown">
+                <span class="nav-dropdown-toggle">Nosotros</span>
+                <div class="nav-dropdown-menu">
+                    <a href="./nosotros.html">Quiénes Somos</a>
+                    <a href="./que-hacemos.html">Qué Hacemos</a>
+                </div>
+            </div>
+            <a href="./programas.html">Programas</a>
+            <a href="./empresas.html">Empresas</a>
+            <a href="./noticias.html">Noticias</a>
+            <a href="./contacto.html">Contacto</a>
+        </nav>
+        <div class="navbar__cta">
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSc4DsRGqnbUVHweHnIdXBZ9ygT_4WXOQtL_OMLgvkPzBGbZQQ/viewform" target="_blank" rel="noopener noreferrer" class="btn btn--gold">ASOCIATE</a>
+            <a href="./donar.html" class="btn btn--red">COLABORÁ</a>
+            <button class="navbar__toggle" aria-label="Abrir menú">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </div>
+</header>
 
-        <h1 class="construction-title">Próximamente...</h1>
-        <p class="construction-text">
-            Ups, donar <em>aún no está disponible</em>. Estamos trabajando en esto para que lo puedas hacer <em>lo antes posible</em>.
-        </p>
+<main>
+    <section class="donar-hero__section">
+        <div class="container">
+            <div class="donar-hero__inner">
+                <span class="donar-hero__eyebrow">COLABORAR</span>
+                <h1 class="donar-hero__title">Elegí cómo ayudarnos</h1>
+                <p class="donar-hero__subtitle">Tu apoyo permite que sigamos acompañando a las familias de nuestros héroes.</p>
+            </div>
+        </div>
+    </section>
 
-        <a href="./index.html" class="btn btn--red btn--lg">Volver al inicio</a>
-    </main>
+    <section class="donar-choice__section">
+        <div class="container">
+            <div class="donar-choice__grid">
+                <!-- Donación Única -->
+                <div class="donar-choice__card" data-aos="fade-up">
+                    <div>
+                        <div class="donar-choice__icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                        </div>
+                        <h3>Donación Única</h3>
+                        <p>Realizá un aporte puntual por el monto que desees. Rápido, seguro y directo.</p>
+                    </div>
+                    <a href="./donar-unico.html" class="donar-btn donar-btn--red">Donar ahora</a>
+                </div>
 
+                <!-- Donación Recurrente -->
+                <div class="donar-choice__card donar-choice__card--featured" data-aos="fade-up" data-aos-delay="100">
+                    <div>
+                        <div class="donar-choice__icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M12 8v4"/><path d="M12 16h.01"/></svg>
+                        </div>
+                        <h3>Donación Mensual</h3>
+                        <p>Sumate con un aporte mensual automático. Tu constancia nos permite planificar a largo plazo.</p>
+                    </div>
+                    <a href="https://wa.me/5491139432042?text=Hola!%20Quiero%20sumarme%20como%20donante%20mensual%20a%20Polic%C3%ADas%20Unidos." class="donar-btn donar-btn--outline">Sumarme mensualmente</a>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer class="footer">
+    <div class="container">
+        <div class="footer__top">
+            <div class="footer__brand">
+                <img src="./logo.png" alt="Logo" class="navbar__logo-img">
+                <p class="footer__desc">Acompañamos a policías heridos y sus familias.</p>
+            </div>
+            <div class="footer__col">
+                <h4>Sumate</h4>
+                <ul>
+                    <li><a href="./donar-unico.html">Donación Única</a></li>
+                    <li><a href="https://wa.me/5491139432042">Donación Mensual</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer__bottom">
+            <span>© 2026 Asociación Civil Policías Unidos</span>
+        </div>
+    </div>
+</footer>
+
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>AOS.init();</script>
 </body>
 </html>
