@@ -12,7 +12,7 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
     exit;
 }
 
-$body  = json_decode(file_get_contents('php://input'), true);
+$body = json_decode(file_get_contents('php://input'), true);
 $monto = isset($body['monto']) ? floatval($body['monto']) : 0;
 
 if ($monto <= 0) {
@@ -22,19 +22,14 @@ if ($monto <= 0) {
 }
 
 $preference = [
-    "items" => [[
-        "title"       => "Donación a Policías Unidos",
-        "quantity"    => 1,
-        "unit_price"  => $monto,
-        "currency_id" => "ARS"
-    ]],
-    "back_urls" => [
-        "success" => MP_URL_SUCCESS,
-        "failure" => MP_URL_FAILURE,
-        "pending" => MP_URL_PENDING
+    "items" => [
+        [
+            "title" => "Donación a Policías Unidos",
+            "quantity" => 1,
+            "unit_price" => $monto,
+            "currency_id" => "ARS"
+        ]
     ],
-    "auto_return"          => "approved",
-    "notification_url"     => MP_WEBHOOK_URL,
     "statement_descriptor" => "Policias Unidos ONG"
 ];
 
