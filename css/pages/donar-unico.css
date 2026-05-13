@@ -407,3 +407,34 @@
     color: #FFF;
 }
 .donar-btn--red:hover { background: var(--color-secondary-hover); }
+
+/* ================== DONAR RECURRENTE — extras ================== */
+.donar-widget__email {
+    margin-bottom: 24px;
+}
+.donar-widget__email-input {
+    width: 100%;
+    padding: 16px;
+    border: 1px solid var(--color-muted);
+    border-radius: var(--radius-md);
+    font-family: var(--font-body);
+    font-size: 1rem;
+    color: var(--color-fg);
+    outline: none;
+    transition: border-color 0.2s ease;
+    box-sizing: border-box;
+}
+.donar-widget__email-input:focus {
+    border-color: var(--color-primary);
+}
+.donar-widget__email-input::placeholder {
+    color: var(--color-muted);
+}
+.donar-widget__cancel-note {
+    text-align: center;
+    font-family: var(--font-body);
+    font-size: 0.8rem;
+    color: var(--color-muted);
+    margin: 8px 0 0;
+    line-height: 1.4;
+}
