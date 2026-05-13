@@ -9,38 +9,58 @@ file_put_contents(
     FILE_APPEND
 );
 
-if (!isset($body['type']) || $body['type'] !== 'payment') {
-    http_response_code(200);
-    exit;
+$tipo = $body['type'] ?? '';
+
+// Pago único aprobado
+if ($tipo === 'payment') {
+    $paymentId = $body['data']['id'];
+    $ch = curl_init("https://api.mercadopago.com/v1/payments/{$paymentId}");
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+    curl_setopt($ch, CURLOPT_HTTPHEADER, ['Authorization: Bearer ' . MP_ACCESS_TOKEN]);
+    $response = json_decode(curl_exec($ch), true);
+    curl_close($ch);
+
+    $estado = $response['status'] ?? 'unknown';
+    $monto  = $response['transaction_amount'] ?? 0;
+    $email  = $response['payer']['email'] ?? 'desconocido';
+
+    file_put_contents(__DIR__ . '/pagos-log.txt',
+        date('Y-m-d H:i:s') . " — ÚNICO | Estado: {$estado} | Monto: \${$monto} | Email: {$email}" . PHP_EOL,
+        FILE_APPEND
+    );
+
+    if ($estado === 'approved') {
+        $para    = 'policiasunidosong@gmail.com';
+        $asunto  = "Nueva donación única — $" . number_format($monto, 0, ',', '.');
+        $mensaje = "Donación única aprobada:\n\nMonto: $" . number_format($monto, 0, ',', '.') . "\nDonante: {$email}\nFecha: " . date('d/m/Y H:i') . "\nID MP: {$paymentId}";
+        mail($para, $asunto, $mensaje);
+    }
 }
 
-$paymentId = $body['data']['id'];
+// Suscripción recurrente
+if ($tipo === 'subscription_preapproval') {
+    $preapprovalId = $body['data']['id'];
+    $ch = curl_init("https://api.mercadopago.com/preapproval/{$preapprovalId}");
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+    curl_setopt($ch, CURLOPT_HTTPHEADER, ['Authorization: Bearer ' . MP_ACCESS_TOKEN]);
+    $response = json_decode(curl_exec($ch), true);
+    curl_close($ch);
 
-$ch = curl_init("https://api.mercadopago.com/v1/payments/{$paymentId}");
-curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-curl_setopt($ch, CURLOPT_HTTPHEADER, [
-    'Authorization: Bearer ' . MP_ACCESS_TOKEN
-]);
+    $estado = $response['status'] ?? 'unknown';
+    $monto  = $response['auto_recurring']['transaction_amount'] ?? 0;
+    $email  = $response['payer_email'] ?? 'desconocido';
 
-$response = json_decode(curl_exec($ch), true);
-curl_close($ch);
+    file_put_contents(__DIR__ . '/pagos-log.txt',
+        date('Y-m-d H:i:s') . " — RECURRENTE | Estado: {$estado} | Monto: \${$monto}/mes | Email: {$email}" . PHP_EOL,
+        FILE_APPEND
+    );
 
-$estado = $response['status'] ?? 'unknown';
-$monto  = $response['transaction_amount'] ?? 0;
-$email  = $response['payer']['email'] ?? 'desconocido';
-
-file_put_contents(
-    __DIR__ . '/pagos-log.txt',
-    date('Y-m-d H:i:s') . " — Estado: {$estado} | Monto: \${$monto} | Email: {$email}" . PHP_EOL,
-    FILE_APPEND
-);
-
-// Notificación por email a la ONG
-if ($estado === 'approved') {
-    $para    = 'policiasunidosong@gmail.com';
-    $asunto  = "Nueva donacion recibida - $" . number_format($monto, 0, ',', '.');
-    $mensaje = "Nueva donacion recibida:\n\nMonto: $" . number_format($monto, 0, ',', '.') . "\nDonante: {$email}\nFecha: " . date('d/m/Y H:i') . "\nID operacion MP: {$paymentId}";
-    mail($para, $asunto, $mensaje);
+    if ($estado === 'authorized') {
+        $para    = 'policiasunidosong@gmail.com';
+        $asunto  = "Nueva suscripción mensual — $" . number_format($monto, 0, ',', '.') . "/mes";
+        $mensaje = "Nueva suscripción mensual:\n\nMonto: $" . number_format($monto, 0, ',', '.') . "/mes\nDonante: {$email}\nFecha: " . date('d/m/Y H:i') . "\nID suscripción: {$preapprovalId}";
+        mail($para, $asunto, $mensaje);
+    }
 }
 
 http_response_code(200);
