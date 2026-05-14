@@ -2154,7 +2154,7 @@ main {
 }
 
 .footer__legal-links a:hover {
-    color: var(--gold);
+    color: var(--gold) !important;
 }
 
 @media (max-width: 768px) {
