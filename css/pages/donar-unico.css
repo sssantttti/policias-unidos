@@ -23,59 +23,6 @@
     transform-origin: center center;
 }
 
-/* ================== DONAR HERO ================== */
-.donar-hero__section {
-    background-color: var(--color-primary);
-    background-image: 
-        linear-gradient(rgba(26, 39, 68, 0.9), rgba(26, 39, 68, 0.9)),
-        linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
-    background-size: 100% 100%, 40px 40px, 40px 40px;
-    padding: 100px 0;
-    text-align: center;
-    color: #FFF;
-    position: relative;
-    overflow: hidden;
-}
-.donar-hero__section::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 100px;
-    background: linear-gradient(to top, var(--color-bg), transparent);
-    pointer-events: none;
-}
-.donar-hero__inner {
-    max-width: 800px;
-    margin: 0 auto;
-}
-.donar-hero__eyebrow {
-    color: var(--color-secondary);
-    font-family: var(--font-body);
-    font-weight: 600;
-    font-size: 0.9rem;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    display: block;
-    margin-bottom: 12px;
-}
-.donar-hero__title {
-    font-family: var(--font-heading);
-    font-size: clamp(2.5rem, 5vw, 4rem);
-    line-height: 1.1;
-    margin: 0 0 16px;
-    font-weight: 700;
-}
-.donar-hero__subtitle {
-    font-family: var(--font-body);
-    font-size: 1.1rem;
-    color: rgba(255, 255, 255, 0.85);
-    line-height: 1.5;
-    margin: 0;
-}
-
 /* ================== DONAR MAIN ================== */
 .donar-main__section {
     background-color: var(--color-bg);
