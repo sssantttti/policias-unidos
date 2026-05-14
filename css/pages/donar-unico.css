@@ -366,6 +366,13 @@
 .donar-btn--outline:hover {
     background: rgba(26, 39, 68, 0.05);
 }
+.donar-btn--navy {
+    background: var(--color-primary);
+    color: #FFF;
+}
+.donar-btn--navy:hover {
+    background: #111B30;
+}
 .donar-btn--red {
     background: var(--color-secondary);
     color: #FFF;
