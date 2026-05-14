@@ -402,12 +402,15 @@
     color: var(--color-muted);
 }
 .donar-widget__cancel-note {
-    text-align: center;
-    font-family: var(--font-body);
-    font-size: 0.8rem;
-    color: var(--color-muted);
-    margin: 8px 0 0;
-    line-height: 1.4;
+    font-size: 0.85rem;
+    color: var(--color-primary);
+    margin: 20px 0 0;
+    line-height: 1.5;
+    background: rgba(26, 39, 68, 0.05);
+    padding: 15px;
+    border-radius: 8px;
+    border-left: 4px solid var(--color-primary);
+    text-align: left;
 }
 
 /* ================== FOOTER ADJUSTMENT ================== */
