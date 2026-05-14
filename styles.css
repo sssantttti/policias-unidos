@@ -1097,20 +1097,25 @@ main {
 @media (max-width: 768px) {
     .grid--3 {
         grid-template-columns: 1fr;
+        gap: 24px;
     }
 
-    .feature-card__front {
-        height: 180px;
-        position: relative;
+    .feature-card {
+        height: 380px; /* Todas con el mismo tamaño */
+    }
+
+    .feature-card__front, 
+    .feature-card__back {
+        height: 100%;
     }
 
     .feature-card__front img {
-        height: 180px;
+        height: 100%;
         object-fit: cover;
     }
 
     .feature-card h3 {
-        font-size: 1.1rem;
+        font-size: 1.15rem;
     }
 }
 
