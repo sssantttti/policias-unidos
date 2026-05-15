@@ -1673,11 +1673,23 @@ main {
     margin-bottom: 4px;
 }
 
-.team-card span {
-    color: var(--gray-400);
-    font-size: 0.85rem;
+.team-card__role {
+    display: block;
+    font-family: var(--font-body);
+    font-weight: 500;
+    font-size: 0.75rem;
     text-transform: uppercase;
-    letter-spacing: 0.1em;
+    color: #64748b;
+    margin-top: 4px;
+    line-height: 1.3;
+}
+
+.team-card__role--main {
+    color: var(--navy);
+    font-weight: 600;
+    margin-top: 8px;
+    padding-top: 8px;
+    border-top: 1px solid var(--gray-100);
 }
 
 /* ---------- 19. Steps (Cómo funciona) ---------- */
