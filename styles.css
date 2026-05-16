@@ -2225,16 +2225,15 @@ main {
     position: absolute;
     right: 100%;
     margin-right: 16px;
-    background: #FFF;
-    color: #1A2744;
+    background: #25D366;
+    color: #FFF;
     padding: 8px 16px;
     border-radius: 20px;
     font-size: 0.85rem;
     font-weight: 600;
     white-space: nowrap;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
     pointer-events: none;
-    border: 1px solid var(--gray-100);
     opacity: 0;
     transform: translateX(10px);
     transition: all 0.3s ease;
@@ -2243,12 +2242,13 @@ main {
 .whatsapp-float:hover .whatsapp-float__label {
     opacity: 1;
     transform: translateX(0);
+    background-color: #20BA56; /* Match button hover color */
 }
 
 /* Indicador de que el cartel existe (opcional, para que no sea solo hover) */
 @media (min-width: 1024px) {
     .whatsapp-float__label {
-        opacity: 0.9;
+        opacity: 1;
         transform: translateX(0);
     }
 }
