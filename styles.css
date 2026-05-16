@@ -2005,7 +2005,7 @@ main {
 
 .footer__top {
     display: grid;
-    grid-template-columns: 1.4fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(4, 1fr);
     gap: 48px;
     margin-bottom: 56px;
 }
@@ -2038,13 +2038,6 @@ main {
     color: var(--white);
 }
 
-.footer__desc {
-    margin-top: 18px;
-    font-size: 0.9rem;
-    line-height: 1.6;
-    color: rgba(255, 255, 255, 0.6);
-    max-width: 320px;
-}
 
 .footer__cuit {
     margin-top: 18px;
